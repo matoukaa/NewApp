@@ -1,23 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Nameofapp</title>
+  <title>unbridled estore</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav>
-	<ul>
-		<li>Home</li>
-		<li>About</li>
-		<li>Contact</li>
-	</ul>
-</nav>
+  <div class="container">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse">
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="navhome navbar-brand">
+            <a href="#">home</a>
+          </div> <!-- end home -->
+        </div> <!-- end navbar-header -->
+        <div class="navbar-collapse collapse" id="nav-main">
+          <ul class="nav navbar-nav">
+            <li><a href="">clothing</a></li> 
+            <li><a href="">gear</a></li> 
+            <li><a href="">milestones</a></li>
+            <li><a href="">contact</a></li>
+          </ul>
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+             <input type="text" class="form-control" placeholder="Search">
+            </div>
+           <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+        </div> <!-- end navbar-collapse collapse -->
+      </div> 
+    </div> 
+  </div> <!-- end container -->
 <%= yield %>
 <footer>
-	&copy; 2016 Annie Matouka
+  <div class="sticky">
+    <h5>&copy; 2016 Annie Matouka</h5>
+  </div>
 </footer>
-
 </body>
 </html>
