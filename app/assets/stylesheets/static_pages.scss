@@ -4,7 +4,6 @@
 body {
 	margin-top: 100px;
 	width: 100%;
-	color: navy;
 }
 h1 {
 	font-family: Verdana, Geneva, sans-serif;
@@ -18,7 +17,7 @@ h1 {
 	text-transform: uppercase;
 }
 footer {
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	width: 100%;
 	height: 56px;
