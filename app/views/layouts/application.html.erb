@@ -22,15 +22,15 @@
             <span class="icon-bar"></span>
           </button>
           <div class="navhome navbar-brand">
-            <a href="#">home</a>
+            <a><%= link_to "Home", static_pages_index_path %></a>
           </div> <!-- end home -->
         </div> <!-- end navbar-header -->
         <div class="navbar-collapse collapse" id="nav-main">
           <ul class="nav navbar-nav">
-            <li><a href="">clothing</a></li> 
-            <li><a href="">gear</a></li> 
-            <li><a href="">milestones</a></li>
-            <li><a href="">contact</a></li>
+            <li><%= link_to "Clothing", @Products %></li> 
+            <li><%= link_to "Products", @product %></li> 
+            <li><%= link_to "Contact", static_pages_contact_path %></li>
+            <li><%= link_to "About", static_pages_about_path %></li>
           </ul>
           <form class="navbar-form navbar-right" role="search">
             <div class="form-group">
