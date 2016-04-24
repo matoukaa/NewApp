@@ -11,9 +11,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
- <p class="notice"><%= notice %></p>
- <p class="alert"><%= alert %></p>
-  <div class="container">
+
+<!-- navbar starts here -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -27,6 +26,7 @@
             <a><%= link_to "Home", static_pages_index_path %></a>
           </div> <!-- end home -->
         </div> <!-- end navbar-header -->
+        
         <div class="navbar-collapse collapse" id="nav-main">
           <ul class="nav navbar-nav">
             <li><%= link_to "Products", products_path %></li> 
@@ -44,22 +44,31 @@
             </li>
           </ul>
 
-<!-- Search Box -->
-
+          <!-- search box -->
           <%= form_tag("/products", method: "get", class: "navbar-right") do %>
             <%= label_tag(:q, "Search:", class: "hidden") %>
             <%= text_field_tag(:q) %>
             <%= submit_tag("Search", class: "btn navbar-btn btn-sm") %>
-          <% end %>
+          <% end %> <!-- end search box -->
+
         </div> <!-- end navbar-collapse collapse -->
       </div> 
-    </div> 
-  </div> <!-- end container -->
+    </nav> 
+
+<% if notice %>
+ <p id="notice" class="alert alert-info" role="alert"><%= notice %></p>
+<% end %>
+<% if alert %>
+ <p id="alert" class="alert alert-info"><%= alert %></p>
+<% end %>
+
 <%= yield %>
+
 <footer>
-  <div class="sticky">
+  <div class="container-fluid footer-content sticky">
     <h5>&copy; 2016 Annie Matouka</h5>
   </div>
 </footer>
+
 </body>
 </html>
