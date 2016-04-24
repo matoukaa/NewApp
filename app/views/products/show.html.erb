@@ -1,29 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-md 6 product-show">
+      <img src="<%= @product.image_url %>" alt="<%= @product.name %>" class="img-responsive"/>
+    </div>
+    <div class="col-sm-6 col-md-6 product-show">
+        <h1><%= @product.name %></h1>
+        <p>
+          <%= @product.description %>
+        </p>
+        <p>
+          <strong>Color:</strong> <%= @product.colour %>
+        </p>
+        </p>
+          <strong>Price:</strong> <%= @product.price %>
+        </p>  
+          <%= link_to 'Edit', edit_product_path(@product) %> |
+          <%= link_to 'Back', products_path %>  
+    </div>
+  </div>
+  </br>
+  <div class="comments">
+    <h2>Reviews</h2>
+  </div>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
-
-<p>
-	<strong>Colour:</strong>
-	<%= @product.colour %>
-</p>
-
-<p>
-	<strong>Price:</strong>
-	<%= @product.price %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+</div>
