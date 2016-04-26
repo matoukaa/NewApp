@@ -14,13 +14,16 @@
         </p>
           <strong>Price:</strong> <%= @product.price %>
         </p>  
+        <strong>Average Rating: </strong>
+        <p><div class="rated" data-score="<% @product.average_rating %>"></div></p>
           <%= link_to 'Edit', edit_product_path(@product) %> |
           <%= link_to 'Back', products_path %>  
     </div>
   </div>
   </br>
   <div class="comments">
-    <h2>Reviews</h2>
+    <%= render 'new_comment' %>
+    <%= render 'comments' %>
   </div>
 
 <p id="notice"><%= notice %></p>
