@@ -4,9 +4,8 @@
 body {
 	margin-top: 100px;
 }
-h1 {
+h1, h2 {
 	font-family: Verdana, Geneva, sans-serif;
-	color: navy;
 	text-align: center;
 }
 .navbar {
@@ -32,4 +31,14 @@ h5 {
 .contact {
 	margin: 50px 100px 50px 100px;
 	color: #993333;
+}
+h1 {
+	color: navy;
+}
+.my-image {
+	background-attachment: fixed;
+	padding: 25px;
+	height: 700px;
+	width: 100%;
+	opacity: .85;
 }
