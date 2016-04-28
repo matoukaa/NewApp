@@ -3,7 +3,8 @@ require 'rails_helper'
 describe UsersController, :type => :controller do
 
 	before do
-		@user = User.create!(email: "testing@gmail.com", password: "testtest")
+		#@user = User.create!(email: "testing@gmail.com", password: "testtest")
+		@user = FactoryGirl.create(:user)
 		@user2 = User.create!(email: "test2@gmail.com", password: "testtest2")
 	end
 
@@ -20,7 +21,7 @@ describe UsersController, :type => :controller do
 			end
 
 			it "won't load incorrect details of user 2" do
-				get :show, id: @user2
+				get :show, id: @user
 				expect(response.status).to eq 302
 				expect(response).to redirect_to(root_path)
 			end
