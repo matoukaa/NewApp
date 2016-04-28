@@ -16,4 +16,6 @@ FactoryGirl.define do
 		password "12345"
 		admin true
 	end
+
+	
 end
